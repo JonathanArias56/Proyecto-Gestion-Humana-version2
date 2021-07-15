@@ -1,0 +1,9 @@
+.imagen {
+    background-image: url(https://media-exp1.licdn.com/dms/image/C4E1BAQEoZfj8AREBtg/company-background_10000/0/1599515545061?e=2159024400&v=beta&t=6gIsBqMWDjMrz8VMLFF31LxZ_PogpWIrRaWijuIMPX0);
+    background-repeat: no-repeat;
+    background-position: top center;
+  } 
+.contenido_gestion_usuarios{
+    border: 20px blue;
+    padding: 15px;
+}
