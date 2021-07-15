@@ -1,0 +1,60 @@
+﻿################################################################################
+# Este archivo .gitignore ha sido creado automáticamente por Microsoft(R) Visual Studio.
+################################################################################
+
+/zenmate-dialogflow
+/VirtualBox VMs
+/Videos
+/source
+/Searches
+/Saved Games
+/Pictures
+/OneDrive
+/ntuser.ini
+/NTUSER.DAT{fd9a35db-49fe-11e9-aa2c-248a07783950}.TMContainer00000000000000000002.regtrans-ms
+/NTUSER.DAT{fd9a35db-49fe-11e9-aa2c-248a07783950}.TMContainer00000000000000000001.regtrans-ms
+/NTUSER.DAT{fd9a35db-49fe-11e9-aa2c-248a07783950}.TM.blf
+/ntuser.dat.LOG2
+/ntuser.dat.LOG1
+/NTUSER.DAT
+/Music
+/MicrosoftEdgeBackups
+/Links
+/IntelGraphicsProfiles
+/Favorites
+/eclipse-workspace
+/eclipse
+/Documents
+/Desktop
+/Contacts
+/Cisco Packet Tracer 7.2.1
+/AppData
+/AndroidStudioProjects
+/3D Objects
+/.vscode
+/.VirtualBox
+/.viminfo
+/.tooling
+/.thumbnails
+/.templateengine
+/.ssh
+/.packettracer
+/.p2
+/.nvm
+/.nuget
+/.npmrc
+/.node_repl_history
+/.nbi
+/.m2
+/.lesshst
+/.jssc
+/.gradle
+/.github
+/.gitconfig
+/.emulator_console_auth_token
+/.eclipse
+/.dotnet
+/.config
+/.bash_history
+/.AndroidStudio3.4
+/.android
