@@ -13,6 +13,8 @@ import { OrganigramaComponent } from './organigrama/organigrama.component';
 import { SeleccionContratacionComponent } from './seleccion-contratacion/seleccion-contratacion.component';
 import { GestionUsuariosComponent } from './gestion-usuarios/gestion-usuarios.component';
 import { BuscadoTalentosComponent } from './buscado-talentos/buscado-talentos.component';
+import { CapacitacionesComponent } from './capacitaciones/capacitaciones.component';
+import { NotificacionesComponent } from './notificaciones/notificaciones.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { BuscadoTalentosComponent } from './buscado-talentos/buscado-talentos.co
     OrganigramaComponent,
     SeleccionContratacionComponent,
     GestionUsuariosComponent,
-    BuscadoTalentosComponent
+    BuscadoTalentosComponent,
+    CapacitacionesComponent,
+    NotificacionesComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -32,8 +36,8 @@ import { BuscadoTalentosComponent } from './buscado-talentos/buscado-talentos.co
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'counter', component: CounterComponent },
-      { path: 'fetch-data', component: FetchDataComponent },
+      { path: 'capacitaciones', component: CapacitacionesComponent },
+      { path: 'notificaciones', component: NotificacionesComponent },
       { path: 'organigrama', component: OrganigramaComponent },
       { path: 'seleccion_contratacion', component: SeleccionContratacionComponent },
       { path: 'gestion_usuarios', component: GestionUsuariosComponent },
