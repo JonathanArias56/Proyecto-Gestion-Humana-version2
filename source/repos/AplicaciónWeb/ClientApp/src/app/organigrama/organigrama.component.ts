@@ -8,7 +8,7 @@ const $ = go.GraphObject.make;
   styleUrls: ['./organigrama.component.css']
 })
 export class OrganigramaComponent implements OnInit {
-  public selectedNode = null;
+  public selectedNode = "Hola";
 
   public model: go.TreeModel = new go.TreeModel(
     [

@@ -3,6 +3,7 @@
   En la presente pagina se encuentra el esquema de <a routerLink ="/counter">talento humano</a>
 </div>
 <div>
+  {{selectedNode  | uppercase}}
   <a href="/count"><img src=""></a>
 </div>
 <div (nodeClicked)='setSelectedNode($event)'>

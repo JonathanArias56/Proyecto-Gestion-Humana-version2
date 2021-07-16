@@ -2,3 +2,34 @@
 <div class="container">
   <a>A continuación podrá realizar un busqueda dentro de los perfiles de la empresa de acuerdo a unas características específicas</a>
 </div>
+
+<div>
+    <label>nombre:
+        <input [(ngModel)]="usuario.name" placeholder="nombre del usuario">
+    </label>
+    <label>-</label>
+    <label>profesión:
+        <input [(ngModel)]="usuario.carrera" placeholder="profesión">
+    </label>
+    <button class="btn btn-primary" (click)="buscarUsuario(usuario.name)">Buscar</button>
+</div>
+<div>
+    <span>Nombre del usuario buscado: </span> {{usuario.name}}
+</div>
+<div>
+    <span>Profesión del usuario buscado: </span>{{usuario.carrera}}
+</div>
+<div>
+    <h1>Agregar usuario</h1>
+    <label>nombre:
+        <input [(ngModel)]="usuarioAgregar.name" placeholder="nombre del usuario">
+    </label>
+    <label>-</label>
+    <label>edad:
+        <input [(ngModel)]="usuarioAgregar.edad" placeholder="edad">
+    </label>
+    <label>profesión:
+        <input [(ngModel)]="usuarioAgregar.carrera" placeholder="profesión">
+    </label>
+    <button class="btn btn-primary" (click)="agregarUsuario(usuarioAgregar.name,usuarioAgregar.edad, usuarioAgregar.carrera)">Agregar</button>
+</div>
