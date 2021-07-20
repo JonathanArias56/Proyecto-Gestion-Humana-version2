@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import {Usuario} from '../usuario';
 class Persona{
-    name:string;
-    id:number;
-    edad:number;
-    carrera:string;
+    public name:string;
+    public id:number;
+    public edad:number;
+    public carrera:string;
     constructor(pName:string,pId:number,pEdad:number,pCarrera:string) {
       this.name=pName;
       this.id=pId;
