@@ -19,6 +19,8 @@ import { LoginComponent } from './login/login.component';
 import { ErrorComponent } from './error/error.component';
 import { LogoutComponent } from './logout/logout.component';
 import { RouteGuardService } from './service/route-guard.service';
+import { InspectorComponent } from './inspector/inspector.component';
+import { DetalleUsuarioComponent } from './detalle-usuario/detalle-usuario.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,8 @@ import { RouteGuardService } from './service/route-guard.service';
     LoginComponent,
     ErrorComponent,
     LogoutComponent,
+    InspectorComponent,
+    DetalleUsuarioComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -53,6 +57,8 @@ import { RouteGuardService } from './service/route-guard.service';
       { path: 'gestion_usuarios', component: GestionUsuariosComponent, canActivate: [RouteGuardService] },
       { path: 'buscador_talentos', component: BuscadoTalentosComponent, canActivate: [RouteGuardService] },
       { path: 'logout', component: LogoutComponent, canActivate: [RouteGuardService] },
+      { path: 'inspector', component: InspectorComponent, canActivate: [RouteGuardService] },
+      { path: 'detalle_usuario', component: DetalleUsuarioComponent, canActivate: [RouteGuardService] },
       { path: '**', component: ErrorComponent },
       
       

@@ -8,55 +8,11 @@ const $ = go.GraphObject.make;
   styleUrls: ['./organigrama.component.css']
 })
 export class OrganigramaComponent implements OnInit {
-  public selectedNode = "Hola";
 
-  public model: go.TreeModel = new go.TreeModel(
-    [
-      { 'key': 1, 'name': 'Gerardo Baquero', 'title': 'CEO' },
-      { 'key': 2, 'name': 'Rigonel Rodriguez', 'title': 'Operaciones', 'parent': 1 },
-      { 'key': 3, 'name': 'Andrés Guzman', 'title': 'Gestión Estrategica', 'parent': 2 },
-      { 'key': 4, 'name': 'Laura Cespedes', 'title': 'Financiera', 'parent': 3 },
-      { 'key': 5, 'name': 'Camilo Rodriguez', 'title': 'Tech', 'parent': 3 },
-      { 'key': 6, 'name': 'Gabriel G.', 'title': 'Comercial', 'parent': 3 },
-      { 'key': 7, 'name': 'Andrés Guzman', 'title': 'Experiencia de Usuario', 'parent': 3 },
-      { 'key': 8, 'name': 'Talento Humano', 'title': 'Alan Baquero', 'parent': 3 },
-      { 'key': 9, 'name': 'T', 'title': 'Events Mgr', 'parent': 4 },
-      { 'key': 10, 'name': 'N', 'title': 'Engineering', 'parent': 4 },
-      { 'key': 11, 'name': 'P', 'title': '', 'parent': 5 },
-      { 'key': 12, 'name': 'App', 'title': 'Software', 'parent': 5 },
-      { 'key': 13, 'name': 'D', 'title': 'Testing', 'parent': 5 },
-      { 'key': 14, 'name': 'Expansion', 'title': 'Hardware', 'parent': 6 },
-      { 'key': 15, 'name': 'Mont', 'title': 'Quality', 'parent': 6 },
-      { 'key': 16, 'name': 'P.D', 'title': 'Sales Rep', 'parent': 6 },
-      { 'key': 17, 'name': 'Atención al cliente', 'title': 'Michel Quintero', 'parent': 7 },
-      { 'key': 18, 'name': 'Soporte al cliente', 'title': 'Jonathan Arias', 'parent': 7 },
-      { 'key': 19, 'name': 'Automatización', 'title': 'Sebastián Calero', 'parent': 7 },
-      { 'key': 20, 'name': 'Experiencia', 'title': 'Camilo Escobar', 'parent': 7 },
-      { 'key': 21, 'name': 'Calidad', 'title': 'Angelica Carrillo', 'parent': 7 },
-      { 'key': 22, 'name': 'C', 'title': 'Sales Rep', 'parent': 8 },
-      { 'key': 23, 'name': 'B', 'title': 'Sales Rep', 'parent': 8 },
-      { 'key': 24, 'name': 'TL', 'title': 'Sales Rep', 'parent': 11 },
-      { 'key': 25, 'name': 'U.A.', 'title': 'Sales Rep', 'parent': 15 },
-      { 'key': 26, 'name': 'I', 'title': 'Sales Rep', 'parent': 15 },
-      { 'key': 27, 'name': 'S.M.', 'title': 'Sales Rep', 'parent': 16 },
-      { 'key': 28, 'name': 'F.', 'title': 'Sales Rep', 'parent': 24 },
-      { 'key': 29, 'name': 'B.', 'title': 'Sales Rep', 'parent': 24 },
-      { 'key': 30, 'name': 'D.', 'title': 'Sales Rep', 'parent': 24 },
-      { 'key': 31, 'name': 'M.', 'title': 'Sales Rep', 'parent': 24 }
-    ]
-  );
-
-  public setSelectedNode(node) {
-    alert("Probando si se selecciono el nodo"+node.data.name);
-    this.selectedNode = node;
-  }
-  public clickAdd(){
-    alert('que mas');
-  }
   public diagram: go.Diagram = null;
 
-  //@Input()
-  //public model: go.Model;
+  @Input()
+  public model: go.Model;
 
   @Output()
   public nodeClicked = new EventEmitter();
@@ -181,7 +137,6 @@ export class OrganigramaComponent implements OnInit {
     // when the selection changes, emit event to app-component updating the selected node
     this.diagram.addDiagramListener('ChangedSelection', (e) => {
       const node = this.diagram.selection.first();
-      alert(node.data.name);
       this.nodeClicked.emit(node);
     });
   }

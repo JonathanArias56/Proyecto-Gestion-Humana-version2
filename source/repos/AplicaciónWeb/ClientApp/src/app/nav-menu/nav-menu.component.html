@@ -1,6 +1,6 @@
 <header>
   <nav
-    class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3"
+    class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark  border-bottom box-shadow mb-3" style="background-color: #5C0E60;"
   >
     <div class="container">
       <a *ngIf="this.autenticacionService.isUserLoggedIn()" class="navbar-brand" [routerLink]="['home',name]">Home</a>
@@ -21,7 +21,7 @@
       >
         <ul class="navbar-nav flex-grow">
           <li *ngIf="this.autenticacionService.isUserLoggedIn()" class="nav-item" [routerLinkActive]="['link-active']">
-           <a class="nav-link text-white" [routerLink]="['/organigrama']"
+           <a class="nav-link text-white" [routerLink]="['/inspector']"
            >Direccionamiento</a>
           </li>
           <li *ngIf="this.autenticacionService.isUserLoggedIn()" class="nav-item" [routerLinkActive]="['link-active']">

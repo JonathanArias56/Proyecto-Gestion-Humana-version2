@@ -8,4 +8,7 @@ import * as go from 'gojs';
 })
 export class AppComponent {
   title = 'app';
+
+ 
+
 }
